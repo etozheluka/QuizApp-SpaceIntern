@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/startFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.log_in.QuizLogInFragment">
+
+    <com.space.quizapp.presentation.ui.log_in.custom_view.QuizLogInVectorView
+        android:id="@+id/startVectorView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_marginBottom="@dimen/dimen_85dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView"
+        style="@style/bigger_text_style_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_75dp"
+        android:text="@string/my_first_quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--   add bottom constraint -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_32dp"
+        android:src="@drawable/il_login_screen"
+        app:layout_constraintBottom_toBottomOf="@+id/startVectorView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_54dp"
+        android:layout_marginBottom="@dimen/dimen_26dp"
+        app:boxCornerRadiusBottomEnd="@dimen/dimen_20dp"
+        app:boxCornerRadiusBottomStart="@dimen/dimen_20dp"
+        app:boxCornerRadiusTopEnd="@dimen/dimen_20dp"
+        app:boxCornerRadiusTopStart="@dimen/dimen_20dp"
+        app:boxStrokeColor="@color/yellow_primary"
+        app:boxStrokeWidth="@dimen/dimen_2dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/logInButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputUserNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/enter_your_name"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logInButton"
+        style="@style/bigger_text_style_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_26dp"
+        android:background="@drawable/shape_round_button"
+        android:backgroundTint="@color/yellow_primary"
+        android:ems="10"
+        android:text="@string/start_quiz"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

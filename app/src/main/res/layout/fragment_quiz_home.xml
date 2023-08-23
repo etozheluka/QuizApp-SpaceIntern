@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.home.QuizHomeFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/helloUserTextView"
+        style="@style/casual_text_style_bold"
+        android:textColor="@color/yellow_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_32dp"
+        android:layout_marginTop="@dimen/dimen_22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/blueGpaVectorView"
+        android:layout_width="@dimen/dimen_350dp"
+        android:layout_height="@dimen/dimen_75dp"
+        android:layout_marginTop="@dimen/dimen_21dp"
+        android:background="@drawable/gpa_vector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helloUserTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_145dp"
+        android:drawableEnd="@drawable/ic_triangle"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:fontFamily="@font/myriad_geo"
+        android:text="@string/details"
+        android:textColor="@color/neutral_white"
+        app:layout_constraintBottom_toBottomOf="@+id/blueGpaVectorView"
+        app:layout_constraintEnd_toEndOf="@+id/blueGpaVectorView"
+        app:layout_constraintStart_toStartOf="@+id/blueGpaVectorView"
+        app:layout_constraintTop_toTopOf="@+id/blueGpaVectorView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/gpaTextView"
+        style="@style/casual_white_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_button"
+        android:backgroundTint="@color/blue_secondary_lighter"
+        android:padding="@dimen/dimen_8dp"
+        android:layout_marginStart="@dimen/dimen_18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/blueGpaVectorView"
+        app:layout_constraintStart_toStartOf="@+id/blueGpaVectorView"
+        app:layout_constraintTop_toTopOf="@+id/blueGpaVectorView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/chooseSubjectTextView"
+        style="@style/casual_text_style_bold"
+        android:textStyle="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_32dp"
+        android:layout_marginTop="@dimen/dimen_32dp"
+        android:text="@string/choose_subject"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueGpaVectorView" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/logOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_23dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:backgroundTint="@color/yellow_primary"
+        android:contentDescription="@string/exit_logo"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/neutral_white" />
+
+    <View
+        android:id="@+id/dividerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_2dp"
+        android:layout_marginBottom="@dimen/dimen_6dp"
+        android:background="@drawable/divider_line"
+        app:layout_constraintBottom_toTopOf="@+id/logOutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startQuizRecyclerView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/startQuizRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/dividerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseSubjectTextView"
+        tools:listitem="@layout/item_subject" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

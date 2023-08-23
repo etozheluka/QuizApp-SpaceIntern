@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="@dimen/dimen_53dp"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/yellow_primary"
+    app:cardCornerRadius="@dimen/dimen_31dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_39dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/descriptionTextView"
+            style="@style/casual_white_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/leaving_question"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/noButton"
+            style="@style/casual_text_style_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_42dp"
+            android:alpha="0.75"
+            android:text="@string/no"
+            app:backgroundTint="@color/neutral_white"
+            app:cornerRadius="@dimen/dimen_31dp"
+            app:layout_constraintEnd_toStartOf="@id/yesButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTextView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/yesButton"
+            style="@style/casual_text_style_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_42dp"
+            android:alpha="0.75"
+            android:text="@string/yes"
+            app:backgroundTint="@color/neutral_white"
+            app:cornerRadius="@dimen/dimen_31dp"
+            app:layout_constraintBottom_toBottomOf="@+id/noButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/noButton"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

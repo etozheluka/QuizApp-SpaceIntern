@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/quizLogInFragment">
+    <fragment
+        android:id="@+id/quizLogInFragment"
+        android:name="com.space.quizapp.presentation.ui.log_in.QuizLogInFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_quizLogInFragment_to_quizHomeFragment"
+            app:destination="@id/quizHomeFragment"
+            app:enterAnim="@anim/open_anim"
+            app:popEnterAnim="@anim/back_anim"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizHomeFragment"
+        android:name="com.space.quizapp.presentation.ui.home.QuizHomeFragment"
+        android:label="fragment_quiz_home"
+        tools:layout="@layout/fragment_quiz_home" >
+        <action
+            android:id="@+id/action_quizHomeFragment_to_quizLogInFragment"
+            app:destination="@id/quizLogInFragment"
+            app:enterAnim="@anim/back_anim"
+            app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_quizHomeFragment_to_quizPointsFragment"
+            app:destination="@id/quizPointsFragment"
+            app:enterAnim="@anim/open_anim"
+            app:popEnterAnim="@anim/back_anim" />
+        <action
+            android:id="@+id/action_quizHomeFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/open_anim"
+            app:popEnterAnim="@anim/back_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizPointsFragment"
+        android:name="com.space.quizapp.presentation.ui.points.QuizPointsFragment"
+        android:label="fragment_quiz_point"
+        tools:layout="@layout/fragment_quiz_point" >
+        <action
+            android:id="@+id/action_quizPointsFragment_to_quizLogInFragment"
+            app:destination="@id/quizLogInFragment"
+            app:enterAnim="@anim/back_anim"
+            app:popUpTo="@id/nav_graph" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.space.quizapp.presentation.ui.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_quizFragment_to_quizHomeFragment"
+            app:destination="@id/quizHomeFragment"
+            app:enterAnim="@anim/back_anim" />
+        <argument
+            android:name="quizTitle"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="quizCount"
+            app:argType="integer" />
+    </fragment>
+</navigation>

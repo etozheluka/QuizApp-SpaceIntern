@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bigger_text_style_bold" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/neutral_white</item>
+        <item name="android:textSize">@dimen/dimen_20sp</item>
+        <item name="android:fontFamily">@font/myriad_geo</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="casual_text_style_bold" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/neutral_dark_grey</item>
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+        <item name="android:fontFamily">@font/myriad_geo</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="casual_white_text_style" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/neutral_white</item>
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+        <item name="android:fontFamily">@font/myriad_geo</item>
+    </style>
+
+    <style name="describe_text" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/neutral_grey</item>
+        <item name="android:textSize">@dimen/dimen_12sp</item>
+        <item name="android:fontFamily">@font/myriad_geo</item>
+    </style>
+</resources>
